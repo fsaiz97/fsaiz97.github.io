@@ -18,15 +18,15 @@ function setUserName() {
         setUserName();
     }
     else {
-        localStorage.setItem('name', myName);
+        sessionStorage.setItem('name', myName);
         myHeading.textContent = 'Welcome to my site, ' + myName;
     }
 }
   
-if(!localStorage.getItem('name')) {
+if(!sessionStorage.getItem('name')) {
 setUserName();
 } else {
-let storedName = localStorage.getItem('name');
+let storedName = sessionStorage.getItem('name');
 myHeading.textContent = 'Welcome to my site, ' + storedName;
 }
 
